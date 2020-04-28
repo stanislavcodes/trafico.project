@@ -1,0 +1,130 @@
+.hero {
+  height: 125vh;
+  background: url(../img/hero-mobile.svg) no-repeat;
+  background-size: auto 100vh;
+}
+
+.header {
+  overflow: hidden;
+}
+
+.btn {
+  height: 40px;
+  padding: 0 1.7rem;
+  background-color: $color-red-primary;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: $fontRubBold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  @include flex-center;
+
+  &-nav {
+    height: 60px;
+    padding: 2rem 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  &-cta {
+    &__text {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.nav {
+  max-height: 10vh;
+  position: relative;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: url(../img/menu-bg.svg) top no-repeat;
+  background-size: 0;
+  background-position: 50% -10rem;
+  transition: all 0.5s ease-in;
+
+  &.open {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-height: 80vh;
+    background-size: 160%;
+    background-position: center;
+    border-bottom-left-radius: 4.5rem;
+    border-bottom-right-radius: 4.5rem;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 4px rgba(245, 136, 109, 0.25);
+  }
+
+  &__list {
+    order: 2;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    visibility: hidden;
+    transform: translateY(-140%);
+    transition: transform 0.8s 0s, padding 0.8s, visibility 0.4s;
+  }
+
+  &.open &__list {
+    transform: translateY(0);
+    padding: 7.5rem 0;
+    visibility: visible;
+  }
+  &__item {
+    transition: all .3s ease-in .2s;
+    &--1 {
+      transform: translate(80px, -40px);
+    }
+    &--2 {
+      transform: translate(-80px, 0);
+    }
+    &--3 {
+      transform: translate(80px, 20px);
+    }
+    &--4 {
+      transform: translate(0, 0);
+    }
+    &:not(:last-child) {
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &.open &__item {
+    &--1 {
+      transform: translate(0px, 0px);
+    }
+    &--2 {
+      transform: translate(0px, 0px);
+    }
+    &--3 {
+      transform: translate(0px, 0px);
+    }
+    &--4 {
+      transform: translate(0, 0);
+    }
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: $fontRubBold;
+    font-size: 1.6rem;
+  }
+}
+
+.section {
+  &-hero {
+    &__heading-box {
+      padding: 0 2.5rem;
+
+    }
+  }
+}

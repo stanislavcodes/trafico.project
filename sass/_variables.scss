@@ -1,0 +1,20 @@
+// variables
+$fontRubReg: "RubReg", sans-serif;
+$fontRubLight: "RubLight", sans-serif;
+$fontRubMed: "RubMed", sans-serif;
+$fontRubBold: "RubBold", sans-serif;
+$fontDM: "DMReg", serif;
+
+
+// colors
+$color-red-primary: #EE4D47;
+$color-red-secondary: #ee4c4780;
+$color-gradient-dark: #F5896D;
+$color-gradient-light: #FEE0B0;
+
+// mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
