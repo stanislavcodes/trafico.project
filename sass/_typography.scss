@@ -29,11 +29,6 @@ html {
     font-size: 4.5rem;
     color: #fff;
     line-height: 100%;
-    margin: 13.5vh 0 7vh 0;
-
-    &.open {
-      margin: 13.5vh 0 7vh 0;
-      margin-top: calc(13.5vh + 66.69px);
-    }
+    margin-bottom: 5vh;
   }
 }

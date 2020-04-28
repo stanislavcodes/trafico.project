@@ -26,10 +26,7 @@ html {
   font-size: 4.5rem;
   color: #fff;
   line-height: 100%;
-  margin: 13.5vh 0 7vh 0; }
-  .heading-primary.open {
-    margin: 13.5vh 0 7vh 0;
-    margin-top: calc(13.5vh + 66.69px); }
+  margin-bottom: 5vh; }
 
 *,
 *::before,
@@ -37,6 +34,9 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+body.open {
+  overflow: hidden; }
 
 .logo {
   flex-basis: calc(100% - 37px);
@@ -102,7 +102,7 @@ html {
 .hero {
   height: 125vh;
   background: url(../img/hero-mobile.svg) no-repeat;
-  background-size: auto 100vh; }
+  background-size: auto calc(100vh + 3.75vh); }
 
 .header {
   overflow: hidden; }
@@ -150,7 +150,8 @@ html {
     border-bottom-left-radius: 4.5rem;
     border-bottom-right-radius: 4.5rem;
     margin-bottom: 10px;
-    box-shadow: 0 4px 4px rgba(245, 136, 109, 0.25); }
+    box-shadow: 0 4px 4px rgba(245, 136, 109, 0.25);
+    z-index: 10000; }
   .nav__list {
     order: 2;
     list-style: none;
@@ -193,5 +194,27 @@ html {
     font-family: "RubBold", sans-serif;
     font-size: 1.6rem; }
 
-.section-hero__heading-box {
-  padding: 0 2.5rem; }
+.section-hero {
+  height: 110vh; }
+  .section-hero__heading-box {
+    padding: 0 2.5rem;
+    padding: 13.5vh 2.5rem 0 2.5rem; }
+    .section-hero__heading-box.open {
+      padding: 23.5vh 2.5rem 0 2.5rem; }
+  .section-hero__illustration-box {
+    height: 72vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%; }
+    .section-hero__illustration-box .illustration-car {
+      max-height: 18.5rem;
+      position: absolute;
+      bottom: 0;
+      left: -40%;
+      z-index: 16; }
+    .section-hero__illustration-box .illustration-humans {
+      max-height: 28rem;
+      position: absolute;
+      right: .5rem;
+      bottom: 10.5rem;
+      z-index: 12; }

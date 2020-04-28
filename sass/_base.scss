@@ -11,4 +11,7 @@ html {
 }
 
 body {
+  &.open {
+    overflow: hidden;
+  }
 }
