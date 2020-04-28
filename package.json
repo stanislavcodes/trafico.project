@@ -1,0 +1,16 @@
+{
+  "name": "trafico.project",
+  "version": "1.0.0",
+  "description": "Your awesome traffic permit cinsultant",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stanislav Korchevskyi",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
