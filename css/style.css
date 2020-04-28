@@ -210,11 +210,11 @@ body.open {
       max-height: 18.5rem;
       position: absolute;
       bottom: 0;
-      left: -40%;
+      left: 0;
       z-index: 16; }
     .section-hero__illustration-box .illustration-humans {
       max-height: 28rem;
       position: absolute;
-      right: .5rem;
+      right: 0.5rem;
       bottom: 10.5rem;
       z-index: 12; }
