@@ -4,6 +4,7 @@ const browserSynk = require("browser-sync").create();
 const reload = browserSynk.reload;
 const autoprefixer = require("gulp-autoprefixer");
 const rename = require("gulp-rename");
+const svgmin = require("gulp-svgmin");
 
 // compile our SCSS to CSS
 function style() {
@@ -42,6 +43,15 @@ function prefix() {
     .pipe(rename("./style.css"))
     .pipe(gulp.dest("./css/"));
 }
+
+// svg min
+gulp.task("default", function () {
+  return gulp
+    .src("img/hero-small-1.svg")
+    .pipe(svgmin())
+    .pipe(rename({ suffix: "-min" }))
+    .pipe(gulp.dest("./img/"));
+});
 
 exports.prefix = prefix;
 exports.style = style;
