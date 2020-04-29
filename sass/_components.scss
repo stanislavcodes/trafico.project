@@ -3,7 +3,7 @@
   z-index: 10;
   display: flex;
   cursor: pointer;
-  
+
   &--text {
     font-family: $fontDM;
     text-transform: uppercase;
@@ -14,6 +14,49 @@
     width: 3.5rem;
     height: 3.5rem;
     margin-right: 1rem;
+  }
+}
+
+.btn {
+  height: 40px;
+  width: 150px;
+  padding: 0 2rem;
+  background: $color-red-primary;
+  background-size: 400%;
+  background-position: left;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: $fontRubBold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  @include flex-center;
+  transition: all 0.3s ease;
+
+  &-nav {
+    height: 50px;
+    padding: 0 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  &-cta {
+    &__text {
+      margin-right: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    &:hover &__text,
+    &:active &__text {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.icon {
+  &-arrow-right {
+    width: 20px;
+    height: 8px;
   }
 }
 

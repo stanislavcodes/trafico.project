@@ -8,6 +8,7 @@ $fontDM: "DMReg", serif;
 
 // colors
 $color-red-primary: #EE4D47;
+$color-red-primary-darker: #ef5c57;
 $color-red-secondary: #ee4c4780;
 $color-gradient-dark: #F5896D;
 $color-gradient-light: #FEE0B0;
@@ -17,4 +18,40 @@ $color-gradient-light: #FEE0B0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// Media queries manager
+// Breakpoints
+$breakpoints: (
+  xsmall: 359px,
+  small: 499px,
+  medium: 699px,
+  xmedium: 899px,
+  large: 1029px,
+  xlarge: 1459px,
+  xxlarge: 1859px,
+  xxxlarge: 2099px,
+);
+
+@mixin breakpointMax($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (max-width: $breakpoint-value) {
+    @content;
+  }
+}
+@mixin breakpointMin($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+@mixin breakpointMinMax($sizeMin, $sizeMax) {
+  $breakpoint-value-min: map-get($breakpoints, $sizeMin);
+  $breakpoint-value-max: map-get($breakpoints, $sizeMax);
+
+  @media (min-width: $breakpoint-value-min) and (max-width: $breakpoint-value-max) {
+    @content;
+  }
 }

@@ -23,7 +23,7 @@ html {
 
 .heading-primary {
   font-family: "DMReg", serif;
-  font-size: 4.5rem;
+  font-size: calc(12 * 1vw);
   color: #fff;
   line-height: 100%;
   margin-bottom: 5vh; }
@@ -52,6 +52,39 @@ body.open {
     width: 3.5rem;
     height: 3.5rem;
     margin-right: 1rem; }
+
+.btn {
+  height: 40px;
+  width: 150px;
+  padding: 0 2rem;
+  background: #EE4D47;
+  background-size: 400%;
+  background-position: left;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: "RubBold", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease; }
+  .btn-nav {
+    height: 50px;
+    padding: 0 2.4rem;
+    font-size: 1.6rem; }
+  .btn-cta__text {
+    margin-right: 2rem;
+    transition: all 0.3s ease; }
+  .btn-cta:hover .btn-cta__text,
+  .btn-cta:active .btn-cta__text {
+    margin-right: 1rem; }
+
+.icon-arrow-right {
+  width: 20px;
+  height: 8px; }
 
 .nav__hamburger {
   flex-basis: 35px;
@@ -101,32 +134,16 @@ body.open {
 
 .hero {
   height: 125vh;
-  background: url(../img/hero-mobile.svg) no-repeat;
+  background: url(../img/hero-small.svg) no-repeat;
   background-size: auto calc(100vh + 3.75vh); }
+  @media screen and (min-width: 499px) {
+    .hero {
+      background: url(../img/hero-medium.svg) no-repeat;
+      background-size: 100%;
+      height: 90vh; } }
 
 .header {
   overflow: hidden; }
-
-.btn {
-  height: 40px;
-  padding: 0 1.7rem;
-  background-color: #EE4D47;
-  border: none;
-  border-radius: 0.5rem;
-  font-family: "RubBold", sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .btn-nav {
-    height: 60px;
-    padding: 2rem 2.4rem;
-    font-size: 1.6rem; }
-  .btn-cta__text {
-    margin-right: 2rem; }
 
 .nav {
   max-height: 10vh;
@@ -168,7 +185,7 @@ body.open {
     padding: 7.5rem 0;
     visibility: visible; }
   .nav__item {
-    transition: all .3s ease-in .2s; }
+    transition: all 0.3s ease-in 0.2s; }
     .nav__item--1 {
       transform: translate(80px, -40px); }
     .nav__item--2 {
@@ -196,25 +213,62 @@ body.open {
 
 .section-hero {
   height: 110vh; }
+  @media screen and (min-width: 499px) {
+    .section-hero {
+      height: 100%; } }
   .section-hero__heading-box {
     padding: 0 2.5rem;
     padding: 13.5vh 2.5rem 0 2.5rem; }
+    @media screen and (min-width: 499px) {
+      .section-hero__heading-box {
+        padding: 5vh 5rem 0 5rem; } }
     .section-hero__heading-box.open {
       padding: 23.5vh 2.5rem 0 2.5rem; }
+      @media screen and (min-width: 499px) {
+        .section-hero__heading-box.open {
+          padding: 15vh 5rem 0 5rem; } }
   .section-hero__illustration-box {
-    height: 72vh;
+    height: 70vh;
     overflow: hidden;
     position: relative;
     width: 100%; }
+    @media screen and (max-width: 359px) {
+      .section-hero__illustration-box {
+        height: 70vh; } }
+    @media screen and (min-width: 499px) {
+      .section-hero__illustration-box {
+        height: 50vh; } }
     .section-hero__illustration-box .illustration-car {
-      max-height: 18.5rem;
+      max-height: 18rem;
       position: absolute;
       bottom: 0;
       left: 0;
       z-index: 16; }
+      @media screen and (max-width: 359px) {
+        .section-hero__illustration-box .illustration-car {
+          max-height: 50vw; } }
+      @media screen and (min-width: 499px) {
+        .section-hero__illustration-box .illustration-car {
+          max-height: 35vw; } }
+      @media screen and (min-width: 1029px) {
+        .section-hero__illustration-box .illustration-car {
+          max-height: 25vw; } }
     .section-hero__illustration-box .illustration-humans {
       max-height: 28rem;
       position: absolute;
       right: 0.5rem;
-      bottom: 10.5rem;
+      bottom: 13.5rem;
       z-index: 12; }
+      @media screen and (max-width: 359px) {
+        .section-hero__illustration-box .illustration-humans {
+          max-height: 75vw; } }
+      @media screen and (min-width: 499px) {
+        .section-hero__illustration-box .illustration-humans {
+          right: 7rem;
+          bottom: 15.5rem; } }
+      @media screen and (min-width: 699px) {
+        .section-hero__illustration-box .illustration-humans {
+          right: 9.5rem; } }
+      @media screen and (min-width: 1029px) {
+        .section-hero__illustration-box .illustration-humans {
+          max-height: calc(32 * 1vw); } }
