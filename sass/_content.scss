@@ -16,13 +16,13 @@
 }
 
 .nav {
-  max-height: 10vh;
+  max-height: calc(4.5vh + 35px);
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   // position: relative;
-  padding: 1.5rem 2rem;
+  padding: 2.25vh 3vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -114,10 +114,10 @@
 
     &__heading-box {
       padding: 0 2.5rem;
-      padding: 13.5vh 2.5rem 0 2.5rem;
+      padding: 23.5vh 2.5rem 0 2.5rem;
 
       @include breakpointMin(small) {
-        padding: 5vh 5rem 0 5rem;
+        padding: 15vh 5rem 0 5rem;
       }
 
       // &.open {
