@@ -86,9 +86,16 @@ body.open {
   width: 20px;
   height: 8px; }
 
-.nav__hamburger {
-  flex-basis: 35px;
+.nav__hamburger--container {
   order: 1;
+  flex-basis: 35px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.nav__hamburger {
   z-index: 10;
   height: 24px;
   width: 35px;
@@ -147,28 +154,27 @@ body.open {
 
 .nav {
   max-height: 10vh;
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   padding: 1.5rem 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: url(../img/menu-bg.svg) top no-repeat;
-  background-size: 0;
+  background: url(../img/menu-bg.svg) top no-repeat, url(../img/menu-bg-1.svg) top no-repeat;
+  background-size: 0, 130%;
   background-position: 50% -10rem;
-  transition: all 0.5s ease-in; }
+  transition: all 0.5s ease-in;
+  z-index: 10000; }
   .nav.open {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
     max-height: 80vh;
-    background-size: 160%;
+    background-size: 160%, 0;
     background-position: center;
     border-bottom-left-radius: 4.5rem;
     border-bottom-right-radius: 4.5rem;
     margin-bottom: 10px;
-    box-shadow: 0 4px 4px rgba(245, 136, 109, 0.25);
-    z-index: 10000; }
+    box-shadow: 0 4px 4px rgba(245, 136, 109, 0.25); }
   .nav__list {
     order: 2;
     list-style: none;
@@ -222,11 +228,6 @@ body.open {
     @media screen and (min-width: 499px) {
       .section-hero__heading-box {
         padding: 5vh 5rem 0 5rem; } }
-    .section-hero__heading-box.open {
-      padding: 23.5vh 2.5rem 0 2.5rem; }
-      @media screen and (min-width: 499px) {
-        .section-hero__heading-box.open {
-          padding: 15vh 5rem 0 5rem; } }
   .section-hero__illustration-box {
     height: 70vh;
     overflow: hidden;

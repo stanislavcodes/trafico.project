@@ -61,9 +61,15 @@
 }
 
 .nav {
-  &__hamburger {
-    flex-basis: 35px;
+  &__hamburger--container {
     order: 1;
+    flex-basis: 35px;
+    width: 35px;
+    height: 35px;
+    @include flex-center;
+  }
+
+  &__hamburger {
     z-index: 10;
     height: 24px;
     width: 35px;

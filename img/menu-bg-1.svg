@@ -1,0 +1,10 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="linear-gradient" x1="228.36" y1="306.69" x2="411.86" y2="-21.81" gradientTransform="matrix(1, 0, 0, -1, 0, 514)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f1886e"/>
+      <stop offset="1" stop-color="#fee0b0"/>
+    </linearGradient>
+  </defs>
+  <title>menu-bg-1</title>
+  <circle cx="255.77" cy="256.39" r="256" opacity="0.7" fill="url(#linear-gradient)"/>
+</svg>
