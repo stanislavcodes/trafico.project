@@ -141,7 +141,7 @@ body.open {
 
 .hero {
   height: 125vh;
-  background: url(../img/hero-small-1.svg) no-repeat;
+  background: url(../img/hero-small-1-min.svg) no-repeat;
   background-size: auto calc(100vh + 3.75vh); }
   @media screen and (min-width: 499px) {
     .hero {
