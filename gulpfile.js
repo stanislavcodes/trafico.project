@@ -36,22 +36,22 @@ function watch() {
 }
 
 // autoprefixer
-function prefix() {
-  return gulp
-    .src("./css/main.css")
-    .pipe(autoprefixer())
-    .pipe(rename("./style.css"))
-    .pipe(gulp.dest("./css/"));
-}
+// function prefix() {
+//   return gulp
+//     .src("./css/main.css")
+//     .pipe(autoprefixer())
+//     .pipe(rename("./style.css"))
+//     .pipe(gulp.dest("./css/"));
+// }
 
 // svg min
-gulp.task("default", function () {
-  return gulp
-    .src("img/hero-small-1.svg")
-    .pipe(svgmin())
-    .pipe(rename({ suffix: "-min" }))
-    .pipe(gulp.dest("./img/"));
-});
+// gulp.task("default", function () {
+//   return gulp
+//     .src("img/hero-small-1.svg")
+//     .pipe(svgmin())
+//     .pipe(rename({ suffix: "-min" }))
+//     .pipe(gulp.dest("./img/"));
+// });
 
 exports.prefix = prefix;
 exports.style = style;
