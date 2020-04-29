@@ -1,6 +1,6 @@
 .hero {
   height: 125vh;
-  background: url(../img/hero-small-1-min.svg) no-repeat;
+  background: url(../img/hero-small-bg.svg) no-repeat;
   background-size: auto calc(100vh + 3.75vh);
 
   @include breakpointMin(small) {
