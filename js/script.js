@@ -12,6 +12,19 @@ hamburger.addEventListener("click", function (e) {
   navToggle(e);
 });
 
+// function parallaxMediaCheck(x) {
+//   let layers = document.querySelectorAll(".layer");
+//   if (x.matches) {
+//     // If media query matches
+//   } else {
+//     hamburger.addEventListener("click", function (e) {
+//       navToggle(e);
+//     });
+//   }
+// }
+// var x = window.matchMedia("(max-width: 1023px)");
+// parallaxMediaCheck(x);
+
 /////////////////////// functions
 
 function navToggle(e) {

@@ -27,6 +27,9 @@ html {
   color: #fff;
   line-height: 100%;
   margin-bottom: 5vh; }
+  @media screen and (min-width: 1029px) {
+    .heading-primary {
+      font-size: calc(6 * 1vw); } }
 
 *,
 *::before,
@@ -35,31 +38,43 @@ html {
   padding: 0;
   box-sizing: border-box; }
 
-body::-webkit-scrollbar {
-  width: 5px;
-  background: transparent; }
-
-body::-webkit-scrollbar-thumb {
-  background-color: #7e7e7e65;
-  background-color: #ef5c5767; }
-
-body.open {
-  overflow: hidden; }
+body {
+  background-color: #FEF8F5; }
+  body::-webkit-scrollbar {
+    width: 5px;
+    background: transparent; }
+  body::-webkit-scrollbar-thumb {
+    background-color: #7e7e7e65;
+    background-color: #ef5c5767; }
+  body.open {
+    overflow: hidden; }
 
 .logo {
-  flex-basis: calc(100% - 37px);
+  flex-basis: calc(100% - 35px);
   z-index: 10;
   display: flex;
+  align-items: center;
   cursor: pointer; }
+  @media screen and (min-width: 1029px) {
+    .logo {
+      flex-basis: auto; } }
   .logo--text {
     font-family: "DMReg", serif;
     text-transform: uppercase;
     font-size: 2.2rem;
     color: #fff; }
+    @media screen and (min-width: 1029px) {
+      .logo--text {
+        font-size: 3.2rem; } }
   .logo--img {
     width: 3.5rem;
     height: 3.5rem;
     margin-right: 1rem; }
+    @media screen and (min-width: 1029px) {
+      .logo--img {
+        height: 5rem;
+        width: 5rem;
+        margin-right: 1rem; } }
 
 .btn {
   height: 40px;
@@ -102,6 +117,10 @@ body.open {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media screen and (min-width: 1029px) {
+    .nav__hamburger--container {
+      order: 2;
+      display: none; } }
 
 .nav__hamburger {
   z-index: 10;
@@ -153,7 +172,10 @@ body.open {
   @media screen and (min-width: 499px) {
     .hero {
       background: url(../img/hero-medium-bg.svg) no-repeat;
-      background-size: 100%; } }
+      background-size: auto 100vh; } }
+  @media screen and (min-width: 1029px) {
+    .hero {
+      background: url(../img/hero-large-bg.svg) no-repeat; } }
 
 .header {
   overflow: hidden; }
@@ -169,10 +191,17 @@ body.open {
   flex-wrap: wrap;
   justify-content: space-between;
   background: url(../img/menu-bg.svg) top no-repeat, url(../img/menu-bg-1.svg) top no-repeat;
-  background-size: 0, 160%;
+  background-size: 0, 260%;
   background-position: 50% -10rem;
   transition: all 0.5s ease-in;
   z-index: 10000; }
+  @media screen and (min-width: 1029px) {
+    .nav {
+      max-height: calc(5.5vh + 5rem);
+      position: relative;
+      padding: 5vh 15vw 0 15vw;
+      flex-wrap: nowrap;
+      background: none; } }
   .nav.open {
     max-height: 80vh;
     background-size: 160%, 0;
@@ -192,6 +221,14 @@ body.open {
     visibility: hidden;
     transform: translateY(-140%);
     transition: transform 0.8s 0s, padding 0.8s, visibility 0.4s; }
+    @media screen and (min-width: 1029px) {
+      .nav__list {
+        height: 5rem;
+        width: auto;
+        order: 1;
+        transform: translateY(0);
+        visibility: visible;
+        flex-direction: row; } }
   .nav.open .nav__list {
     transform: translateY(0);
     padding: 7.5rem 0;
@@ -206,8 +243,15 @@ body.open {
       transform: translate(80px, 20px); }
     .nav__item--4 {
       transform: translate(0, 0); }
+    @media screen and (min-width: 1029px) {
+      .nav__item {
+        transform: translate(0px, 0px); } }
     .nav__item:not(:last-child) {
       margin-bottom: 3.5rem; }
+      @media screen and (min-width: 1029px) {
+        .nav__item:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: 10rem; } }
   .nav.open .nav__item--1 {
     transform: translate(0px, 0px); }
   .nav.open .nav__item--2 {
@@ -223,50 +267,51 @@ body.open {
     font-family: "RubBold", sans-serif;
     font-size: 1.6rem; }
 
-.section-hero {
-  height: 110vh; }
+@media screen and (min-width: 499px) {
+  .section-hero {
+    height: 100%; } }
+
+.section-hero__content-box {
+  height: 125vh;
+  position: relative;
+  overflow: hidden;
+  padding: 0 2.5rem;
+  padding: 23.5vh 2.5rem 0 2.5rem; }
   @media screen and (min-width: 499px) {
-    .section-hero {
-      height: 100%; } }
-  .section-hero__heading-box {
-    padding: 0 2.5rem;
-    padding: 23.5vh 2.5rem 0 2.5rem; }
+    .section-hero__content-box {
+      padding: 15vh 5rem 0 5rem; } }
+  @media screen and (min-width: 1029px) {
+    .section-hero__content-box {
+      padding: 8vh 17vw 0 17vw; } }
+  .section-hero__content-box .illustration-car {
+    max-height: 28vh;
+    width: auto;
+    position: absolute;
+    top: 98vh;
+    transform: translateX(-40%);
+    z-index: 16; }
     @media screen and (min-width: 499px) {
-      .section-hero__heading-box {
-        padding: 15vh 5rem 0 5rem; } }
-  .section-hero__illustration-box {
-    height: 70vh;
-    overflow: hidden;
-    position: relative;
-    width: 100%; }
-    .section-hero__illustration-box .illustration-car {
-      max-height: 28vh;
-      width: auto;
-      position: absolute;
-      bottom: 0;
-      transform: translateX(-40%);
-      z-index: 16; }
-      @media screen and (min-width: 499px) {
-        .section-hero__illustration-box .illustration-car {
-          max-height: 35vw;
-          bottom: 7vh;
-          left: -70%; } }
-      @media screen and (min-width: 1029px) {
-        .section-hero__illustration-box .illustration-car {
-          max-height: 25vw; } }
-    .section-hero__illustration-box .illustration-humans {
-      max-height: 42vh;
-      max-width: 53vw;
-      position: absolute;
-      right: 1rem;
-      bottom: 15vh;
-      z-index: 12; }
-      @media screen and (min-width: 499px) {
-        .section-hero__illustration-box .illustration-humans {
-          bottom: 15.5rem; } }
-      @media screen and (min-width: 699px) {
-        .section-hero__illustration-box .illustration-humans {
-          right: 9.5rem; } }
-      @media screen and (min-width: 1029px) {
-        .section-hero__illustration-box .illustration-humans {
-          max-height: calc(32 * 1vw); } }
+      .section-hero__content-box .illustration-car {
+        top: 96vh; } }
+    @media screen and (min-width: 1029px) {
+      .section-hero__content-box .illustration-car {
+        transform: translateX(-55%);
+        max-height: 25vw;
+        top: 86vh; } }
+  .section-hero__content-box .illustration-humans {
+    max-height: 42vh;
+    max-width: 53vw;
+    position: absolute;
+    right: 1rem;
+    top: 70vh;
+    z-index: 12; }
+    @media screen and (min-width: 499px) {
+      .section-hero__content-box .illustration-humans {
+        top: 60vh; } }
+    @media screen and (min-width: 699px) {
+      .section-hero__content-box .illustration-humans {
+        right: 9.5rem; } }
+    @media screen and (min-width: 1029px) {
+      .section-hero__content-box .illustration-humans {
+        max-height: calc(32 * 1vw);
+        right: 15vw; } }

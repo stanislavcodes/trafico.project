@@ -1,22 +1,23 @@
 @font-face {
   font-family: "RubLight";
-  src:  url("../fonts/Rubik/Rubik-Light.ttf") format("truetype");
+  src: url("../fonts/Rubik/Rubik-Light.ttf") format("truetype");
 }
 @font-face {
   font-family: "RubReg";
-  src:  url("../fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+  src: url("../fonts/Rubik/Rubik-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "RubMed";
-  src:  url("../fonts/Rubik/Rubik-Medium.ttf") format("truetype");
+  src: url("../fonts/Rubik/Rubik-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "RubBold";
-  src:  url("../fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+  src: url("../fonts/Rubik/Rubik-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "DMReg";
-  src:  url("../fonts/DMSerifDisplay/DMSerifDisplay-Regular.ttf") format("truetype");
+  src: url("../fonts/DMSerifDisplay/DMSerifDisplay-Regular.ttf")
+    format("truetype");
 }
 
 html {
@@ -31,5 +32,9 @@ html {
     color: #fff;
     line-height: 100%;
     margin-bottom: 5vh;
+
+    @include breakpointMin(large) {
+      font-size: calc(6 * 1vw);
+    }
   }
 }
