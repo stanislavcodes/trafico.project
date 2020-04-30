@@ -1,10 +1,11 @@
 .hero {
-  height: 125vh;
+  // height: 125vh;
   background: url(../img/hero-small-bg.svg) no-repeat;
-  background-size: auto calc(100vh + 3.75vh);
+  // background-size: auto calc(100vh + 3.75vh);
+  background-size: auto 100vh;
 
   @include breakpointMin(small) {
-    height: 90vh;
+    // height: 90vh;
     background: url(../img/hero-medium.svg) no-repeat;
     background-size: 100%;
     // background-position: -10rem 0;
@@ -26,7 +27,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: url(../img/menu-bg.svg) top no-repeat, url(../img/menu-bg-1.svg) top no-repeat;
+  background: url(../img/menu-bg.svg) top no-repeat,
+    url(../img/menu-bg-1.svg) top no-repeat;
   background-size: 0, 130%;
   background-position: 50% -10rem;
   transition: all 0.5s ease-in;
@@ -105,8 +107,6 @@
 .section {
   &-hero {
     height: 110vh;
-    // display: flex;
-    // flex-direction: column;
 
     @include breakpointMin(small) {
       height: 100%;
@@ -119,15 +119,8 @@
       @include breakpointMin(small) {
         padding: 15vh 5rem 0 5rem;
       }
-
-      // &.open {
-      //   padding: 23.5vh 2.5rem 0 2.5rem;
-
-      //   @include breakpointMin(small) {
-      //     padding: 15vh 5rem 0 5rem;
-      //   }
-      // }
     }
+
     &__illustration-box {
       height: 70vh;
       overflow: hidden;
@@ -166,8 +159,8 @@
         max-height: 28rem;
         max-width: 53vw;
         position: absolute;
-        right: 0.5rem;
-        bottom: 13.5rem;
+        right: 1rem;
+        top: 15vh;
         z-index: 12;
 
         @include breakpointMax(xsmall) {

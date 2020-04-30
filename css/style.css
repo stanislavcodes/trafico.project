@@ -35,6 +35,14 @@ html {
   padding: 0;
   box-sizing: border-box; }
 
+body::-webkit-scrollbar {
+  width: 5px;
+  background: transparent; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #7e7e7e65;
+  background-color: #ef5c5767; }
+
 body.open {
   overflow: hidden; }
 
@@ -140,12 +148,10 @@ body.open {
     transform: scale(0) translateX(-100px); }
 
 .hero {
-  height: 125vh;
   background: url(../img/hero-small-bg.svg) no-repeat;
-  background-size: auto calc(100vh + 3.75vh); }
+  background-size: auto 100vh; }
   @media screen and (min-width: 499px) {
     .hero {
-      height: 90vh;
       background: url(../img/hero-medium.svg) no-repeat;
       background-size: 100%; } }
 
@@ -259,8 +265,8 @@ body.open {
       max-height: 28rem;
       max-width: 53vw;
       position: absolute;
-      right: 0.5rem;
-      bottom: 13.5rem;
+      right: 1rem;
+      top: 15vh;
       z-index: 12; }
       @media screen and (max-width: 359px) {
         .section-hero__illustration-box .illustration-humans {

@@ -53,7 +53,7 @@ function watch() {
 //     .pipe(gulp.dest("./img/"));
 // });
 
-exports.prefix = prefix;
+// exports.prefix = prefix;
 exports.style = style;
 exports.watch = watch;
 

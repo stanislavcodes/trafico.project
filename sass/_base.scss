@@ -11,6 +11,14 @@ html {
 }
 
 body {
+  &::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #7e7e7e65;
+    background-color: #ef5c5767;
+  }
   &.open {
     overflow: hidden;
   }
