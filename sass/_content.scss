@@ -1,14 +1,10 @@
 .hero {
-  // height: 125vh;
   background: url(../img/hero-small-bg.svg) no-repeat;
-  // background-size: auto calc(100vh + 3.75vh);
   background-size: auto 100vh;
 
   @include breakpointMin(small) {
-    // height: 90vh;
-    background: url(../img/hero-medium.svg) no-repeat;
+    background: url(../img/hero-medium-bg.svg) no-repeat;
     background-size: 100%;
-    // background-position: -10rem 0;
   }
 }
 
@@ -22,14 +18,13 @@
   top: 0;
   right: 0;
   left: 0;
-  // position: relative;
   padding: 2.25vh 3vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   background: url(../img/menu-bg.svg) top no-repeat,
     url(../img/menu-bg-1.svg) top no-repeat;
-  background-size: 0, 130%;
+  background-size: 0, 160%;
   background-position: 50% -10rem;
   transition: all 0.5s ease-in;
   z-index: 10000;
@@ -127,28 +122,18 @@
       position: relative;
       width: 100%;
 
-      @include breakpointMax(xsmall) {
-        height: 70vh;
-      }
-
-      @include breakpointMin(small) {
-        height: 50vh;
-      }
-
       .illustration-car {
-        max-height: 18rem;
+        max-height: 28vh;
         width: auto;
         position: absolute;
         bottom: 0;
-        left: -60%;
+        transform: translateX(-40%);
         z-index: 16;
-
-        @include breakpointMax(xsmall) {
-          max-height: 50vw;
-        }
 
         @include breakpointMin(small) {
           max-height: 35vw;
+          bottom: 7vh;
+          left: -70%;
         }
 
         @include breakpointMin(large) {
@@ -156,19 +141,14 @@
         }
       }
       .illustration-humans {
-        max-height: 28rem;
+        max-height: 42vh;
         max-width: 53vw;
         position: absolute;
         right: 1rem;
-        top: 15vh;
+        bottom: 15vh;
         z-index: 12;
 
-        @include breakpointMax(xsmall) {
-          max-height: 75vw;
-        }
-
         @include breakpointMin(small) {
-          right: 7rem;
           bottom: 15.5rem;
         }
 

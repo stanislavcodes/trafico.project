@@ -152,7 +152,7 @@ body.open {
   background-size: auto 100vh; }
   @media screen and (min-width: 499px) {
     .hero {
-      background: url(../img/hero-medium.svg) no-repeat;
+      background: url(../img/hero-medium-bg.svg) no-repeat;
       background-size: 100%; } }
 
 .header {
@@ -169,7 +169,7 @@ body.open {
   flex-wrap: wrap;
   justify-content: space-between;
   background: url(../img/menu-bg.svg) top no-repeat, url(../img/menu-bg-1.svg) top no-repeat;
-  background-size: 0, 130%;
+  background-size: 0, 160%;
   background-position: 50% -10rem;
   transition: all 0.5s ease-in;
   z-index: 10000; }
@@ -239,41 +239,30 @@ body.open {
     overflow: hidden;
     position: relative;
     width: 100%; }
-    @media screen and (max-width: 359px) {
-      .section-hero__illustration-box {
-        height: 70vh; } }
-    @media screen and (min-width: 499px) {
-      .section-hero__illustration-box {
-        height: 50vh; } }
     .section-hero__illustration-box .illustration-car {
-      max-height: 18rem;
+      max-height: 28vh;
       width: auto;
       position: absolute;
       bottom: 0;
-      left: -60%;
+      transform: translateX(-40%);
       z-index: 16; }
-      @media screen and (max-width: 359px) {
-        .section-hero__illustration-box .illustration-car {
-          max-height: 50vw; } }
       @media screen and (min-width: 499px) {
         .section-hero__illustration-box .illustration-car {
-          max-height: 35vw; } }
+          max-height: 35vw;
+          bottom: 7vh;
+          left: -70%; } }
       @media screen and (min-width: 1029px) {
         .section-hero__illustration-box .illustration-car {
           max-height: 25vw; } }
     .section-hero__illustration-box .illustration-humans {
-      max-height: 28rem;
+      max-height: 42vh;
       max-width: 53vw;
       position: absolute;
       right: 1rem;
-      top: 15vh;
+      bottom: 15vh;
       z-index: 12; }
-      @media screen and (max-width: 359px) {
-        .section-hero__illustration-box .illustration-humans {
-          max-height: 75vw; } }
       @media screen and (min-width: 499px) {
         .section-hero__illustration-box .illustration-humans {
-          right: 7rem;
           bottom: 15.5rem; } }
       @media screen and (min-width: 699px) {
         .section-hero__illustration-box .illustration-humans {
