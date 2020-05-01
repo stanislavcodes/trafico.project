@@ -1,6 +1,7 @@
 .hero {
   background: url(../img/hero-small-bg.svg) no-repeat;
-  background-size: auto 100vh;
+  // background-size: auto 100vh;
+  background-size: 100vw auto;
 
   @include breakpointMin(small) {
     background: url(../img/hero-medium-bg.svg) no-repeat;
@@ -15,9 +16,13 @@
     background: url(../img/hero-large-bg.svg) no-repeat;
   }
 
-  @media (min-width: 1023px) and (max-height: 800px) {
+  @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 1025px) {
     background-size: 125vw auto;
   }
+
+  // @media (min-width: 1200px) and (max-width: 1300px) and (max-height: 801px) {
+  //   background-size: 110vw auto;
+  // }
   // @include breakpointMinMaxCustom(1023px, 1290px) {
   //   background-size: 125vw auto;
   // }
@@ -48,10 +53,10 @@
     flex-wrap: nowrap;
     background: none;
   }
-  @include breakpointMinMaxCustom(1200px, 1400px) {
+  @include breakpointMinMaxCustom(1200px, 1441px) {
     padding: 5vh 13vw 0 13vw;
   }
-  @media (min-width: 1023px) and (max-height: 800px) {
+  @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 801px) {
     padding: 2vh 5vw 0 5vw;
   }
 
@@ -142,6 +147,10 @@
     color: #fff;
     font-family: $fontRubBold;
     font-size: 1.6rem;
+
+    @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 801px) {
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -165,11 +174,11 @@
       @include breakpointMin(large) {
         padding: 10vh 17vw 0 17vw;
       }
-      @include breakpointMinMaxCustom(1023px, 1290px) {
-        background-size: 125vw auto;
-      }
-      @include breakpointMinMaxCustom(1200px, 1400px) {
+      @include breakpointMinMaxCustom(1200px, 1441px) {
         padding: 8vh 13vw 0 13vw;
+      }
+      @media (min-width: 1200px) and (max-width: 1300px) and (max-height: 801px) {
+        height: 150vh;
       }
 
       .illustration-car {
@@ -189,24 +198,30 @@
           max-height: 25vw;
           top: 86vh;
         }
-        @include breakpointMinMaxCustom(1200px, 1400px) {
+        @include breakpointMinMax(large, xlarge) {
           top: 74vh;
         }
+
+        @include breakpointMinMaxCustom(1400px, 1441px) {
+          top: 65vh;
+        }
+
         @include breakpointMinMaxCustom(1023px, 1290px) {
           transform: translateX(-45%);
           top: 67vh;
         }
-        @include breakpointMinMax(large, xlarge) {
-          top: 67vh;
-        }
 
-        @media (min-width: 1023px) and (max-height: 1025px) {
+        @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 1025px) {
           transform: translateX(-55%);
-          top: 50vh;
+          top: 65vh;
         }
 
-        @media (min-width: 1023px) and (max-height: 800px) {
+        @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 801px) {
           top: 70vh;
+        }
+
+        @media (min-width: 1200px) and (max-width: 1300px) and (max-height: 801px) {
+          top: 98vh;
         }
 
         @include breakpointMin(xlarge) {
@@ -235,22 +250,26 @@
           right: 15vw;
         }
 
-        @include breakpointMinMaxCustom(1023px, 1290px) {
-          right: 0;
-        }
-
         @include breakpointMinMax(large, xlarge) {
+          top: 37vh;
+        }
+
+        @include breakpointMinMaxCustom(1400px, 1441px) {
+          top: 35vh;
+        }
+
+        @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 1025px) {
           top: 40vh;
+          right: 5vw;
         }
 
-        @media (min-width: 1023px) and (max-height: 1025px) {
-          top: 25vh;
-          right: 10vw;
-        }
-
-        @media (min-width: 1023px) and (max-height: 800px) {
+        @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 801px) {
           top: 40vh;
           right: 0;
+        }
+
+        @media (min-width: 1200px) and (max-width: 1300px) and (max-height: 801px) {
+          top: 60vh;
         }
 
         @include breakpointMin(xlarge) {
