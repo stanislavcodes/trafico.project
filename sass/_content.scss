@@ -7,19 +7,25 @@
     // background-size: 100%;
     background-size: auto 100vh;
   }
+  @include breakpointMin(medium) {
+    background-size: 100% auto;
+  }
 
   @include breakpointMin(large) {
     background: url(../img/hero-large-bg.svg) no-repeat;
-    // background-size: 80vw auto;
   }
-}
 
-.header {
-  overflow: hidden;
+  @media (min-width: 1023px) and (max-height: 800px) {
+    background-size: 125vw auto;
+  }
+  // @include breakpointMinMaxCustom(1023px, 1290px) {
+  //   background-size: 125vw auto;
+  // }
 }
 
 .nav {
   max-height: calc(4.5vh + 35px);
+  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -36,11 +42,17 @@
   z-index: 10000;
 
   @include breakpointMin(large) {
-    max-height: calc(5.5vh + 5rem);
+    max-height: calc(5.5vh + 6rem);
     position: relative;
     padding: 5vh 15vw 0 15vw;
     flex-wrap: nowrap;
     background: none;
+  }
+  @include breakpointMinMaxCustom(1200px, 1400px) {
+    padding: 5vh 13vw 0 13vw;
+  }
+  @media (min-width: 1023px) and (max-height: 800px) {
+    padding: 2vh 5vw 0 5vw;
   }
 
   &.open {
@@ -66,7 +78,7 @@
     transition: transform 0.8s 0s, padding 0.8s, visibility 0.4s;
 
     @include breakpointMin(large) {
-      height: 5rem;
+      height: 6rem;
       width: auto;
       order: 1;
       transform: translateY(0);
@@ -126,6 +138,7 @@
   &__link {
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 1.8px;
     color: #fff;
     font-family: $fontRubBold;
     font-size: 1.6rem;
@@ -150,7 +163,13 @@
       }
 
       @include breakpointMin(large) {
-        padding: 8vh 17vw 0 17vw;
+        padding: 10vh 17vw 0 17vw;
+      }
+      @include breakpointMinMaxCustom(1023px, 1290px) {
+        background-size: 125vw auto;
+      }
+      @include breakpointMinMaxCustom(1200px, 1400px) {
+        padding: 8vh 13vw 0 13vw;
       }
 
       .illustration-car {
@@ -169,6 +188,30 @@
           transform: translateX(-55%);
           max-height: 25vw;
           top: 86vh;
+        }
+        @include breakpointMinMaxCustom(1200px, 1400px) {
+          top: 74vh;
+        }
+        @include breakpointMinMaxCustom(1023px, 1290px) {
+          transform: translateX(-45%);
+          top: 67vh;
+        }
+        @include breakpointMinMax(large, xlarge) {
+          top: 67vh;
+        }
+
+        @media (min-width: 1023px) and (max-height: 1025px) {
+          transform: translateX(-55%);
+          top: 50vh;
+        }
+
+        @media (min-width: 1023px) and (max-height: 800px) {
+          top: 70vh;
+        }
+
+        @include breakpointMin(xlarge) {
+          transform: translateX(-55%);
+          top: 75vh;
         }
       }
       .illustration-humans {
@@ -190,6 +233,30 @@
         @include breakpointMin(large) {
           max-height: calc(32 * 1vw);
           right: 15vw;
+        }
+
+        @include breakpointMinMaxCustom(1023px, 1290px) {
+          right: 0;
+        }
+
+        @include breakpointMinMax(large, xlarge) {
+          top: 40vh;
+        }
+
+        @media (min-width: 1023px) and (max-height: 1025px) {
+          top: 25vh;
+          right: 10vw;
+        }
+
+        @media (min-width: 1023px) and (max-height: 800px) {
+          top: 40vh;
+          right: 0;
+        }
+
+        @include breakpointMin(xlarge) {
+          max-height: calc(32 * 1vw);
+          right: 13vw;
+          top: 40vh;
         }
       }
     }

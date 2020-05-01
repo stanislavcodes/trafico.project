@@ -27,7 +27,7 @@ $breakpoints: (
   small: 499px,
   medium: 699px,
   xmedium: 899px,
-  large: 1029px,
+  large: 1023px,
   xlarge: 1459px,
   xxlarge: 1859px,
   xxxlarge: 2099px,
@@ -52,6 +52,11 @@ $breakpoints: (
   $breakpoint-value-max: map-get($breakpoints, $sizeMax);
 
   @media (min-width: $breakpoint-value-min) and (max-width: $breakpoint-value-max) {
+    @content;
+  }
+}
+@mixin breakpointMinMaxCustom($sizeMin, $sizeMax) {
+  @media (min-width: $sizeMin) and (max-width: $sizeMax) {
     @content;
   }
 }
