@@ -205,3 +205,18 @@
     }
   }
 }
+
+.article {
+  background: linear-gradient(#fcddd466, #fcddd466);
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  border-left: 0.6rem solid #ed4d47;
+  &__text {
+    opacity: 1;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 148%;
+  }
+}

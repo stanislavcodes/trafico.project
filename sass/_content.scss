@@ -165,16 +165,16 @@
 
 .section {
   &-hero {
-    @include breakpointMin(small) {
-      height: 100%;
-    }
-
     &__content-box {
       height: 125vh;
       position: relative;
       overflow: hidden;
       padding: 0 2.5rem;
       padding: 23.5vh 2.5rem 0 2.5rem;
+
+      @media (min-width: 359px) and (max-width: 415px) and (min-height: 740px) {
+        height: 115vh;
+      }
 
       @include breakpointMin(small) {
         padding: 15vh 5rem 0 5rem;
@@ -196,6 +196,10 @@
         height: 150vh;
       }
 
+      @include breakpointMin(xxlarge) {
+        height: 135vh;
+      }
+
       .illustration-car {
         max-height: 28vh;
         width: auto;
@@ -203,6 +207,10 @@
         top: 98vh;
         transform: translateX(-40%);
         z-index: 16;
+
+        @media (min-width: 359px) and (max-width: 415px) and (min-height: 740px) {
+          top: 88vh;
+        }
 
         @include breakpointMin(small) {
           top: 96vh;
@@ -256,7 +264,7 @@
           transform: translateX(-55%);
           top: 75vh;
         }
-        
+
         @include breakpointMin(xxlarge) {
           // right: 28vw;
           top: 83vh;
@@ -269,6 +277,10 @@
         right: 1rem;
         top: 70vh;
         z-index: 12;
+
+        @media (min-width: 359px) and (max-width: 415px) and (min-height: 740px) {
+          top: 60vh;
+        }
 
         @include breakpointMin(small) {
           top: 65vh;
@@ -327,6 +339,74 @@
           top: 45vh;
         }
       }
+    }
+  }
+
+  &-about,
+  &-how {
+    padding: 0 2.5rem;
+
+    @include breakpointMin(small) {
+      padding: 0 5rem;
+    }
+
+    @include breakpointMin(large) {
+      padding: 0 15vw;
+    }
+    @include breakpointMinMaxCustom(1200px, 1441px) {
+      padding: 0 13vw;
+    }
+
+    @media (min-width: 1023px) and (max-width: 1100px) and (max-height: 1380px) {
+      padding: 0 13vw;
+    }
+
+    &__illustration {
+      height: 35vh;
+    }
+    &__content-box {
+      display: flex;
+      flex-direction: column;
+
+      @include breakpointMin(xmedium) {
+        flex-direction: row;
+      }
+    }
+
+    &__figure {
+      width: 100%;
+      height: 100%;
+      @include flex-center;
+    }
+
+    &__paragraph {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.3rem;
+      line-height: 200%;
+      color: #402b2b;
+      margin: 3rem 0 4rem 0;
+    }
+
+    &__information {
+    }
+  }
+  &-about {
+    &__figure {
+      @include breakpointMin(xmedium) {
+        order: 1;
+      }
+    }
+    &__information {
+      @include breakpointMin(xmedium) {
+        padding-top: 7.5rem;
+      }
+    }
+  }
+
+  &-how {
+    &__figure {
     }
   }
 }
