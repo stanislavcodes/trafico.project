@@ -154,7 +154,8 @@
     text-transform: uppercase;
     letter-spacing: 1.8px;
     color: #fff;
-    font-family: $fontRubBold;
+    font-family: $fontRubik;
+    font-weight: bold;
     font-size: 1.6rem;
 
     @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 801px) {
@@ -391,7 +392,7 @@
     }
 
     &__paragraph {
-      font-family: Rubik;
+      font-family: $fontRubik;
       font-style: normal;
       font-weight: 300;
       // font-size: 1.3rem;
@@ -515,6 +516,181 @@
     @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 801px) {
     }
     @media (min-width: 1200px) and (max-width: 1300px) and (max-height: 801px) {
+    }
+  }
+
+  &-faq {
+    margin: 100px 0;
+    position: relative;
+    min-height: 117rem;
+
+    padding: 0 2.5rem;
+
+    @include breakpointMin(small) {
+      padding: 0 5rem;
+    }
+
+    // @include breakpointMin(large) {
+    //   padding: 0 15vw;
+    // }
+    // @include breakpointMinMaxCustom(1200px, 1441px) {
+    //   padding: 0 13vw;
+    // }
+
+    // @media (min-width: 1023px) and (max-width: 1100px) and (max-height: 1380px) {
+    //   padding: 0 8vw;
+    // }
+
+    &__background {
+      position: absolute;
+      top: 4rem;
+      right: 0;
+      background: #fdede8;
+      height: 100%;
+      width: 88%;
+      border-top-left-radius: 5.5rem;
+      // border-bottom-left-radius: 50px;
+      z-index: -1;
+    }
+
+    &__content-box {
+    }
+
+    &__figure {
+      @include flex-center;
+      padding: 2rem 0;
+    }
+
+    &__illustration {
+      height: 35vh;
+    }
+
+    &__questions {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .question-box {
+      overflow: hidden;
+      position: relative;
+      height: 5.5rem;
+      margin-bottom: 0.5rem;
+      transition: all 0.35s ease-in-out;
+      box-shadow: 0px 11.8273px 23.6545px rgba(238, 77, 71, 0.1);
+
+      @include breakpointMax(xsmall) {
+        height: 6rem;
+      }
+
+      &.open {
+        margin-bottom: 2.5rem;
+      }
+    }
+    .question,
+    .question__more-btn {
+      padding: 0 2rem;
+      height: 5.5rem;
+      @include flex-center;
+      border-radius: 0.6rem;
+      justify-content: space-between;
+
+      @include breakpointMax(xsmall) {
+        height: 6rem;
+      }
+    }
+
+    .question {
+      background-color: #fff;
+      z-index: 5;
+      transition: box-shadow 300ms 100ms;
+
+      &.open {
+        box-shadow: 0px 11.8273px 23.6545px #ee4d471a;
+      }
+
+      &__name {
+        font-family: $fontRubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: calc(1rem + 0.6vw);
+        line-height: 148%;
+        max-width: 88%;
+      }
+      &__icon {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+
+        &--span {
+          height: 1px;
+          width: 12px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform-origin: center;
+          transform: translate(-50%, -50%);
+          transition: all 0.25s ease;
+          background-color: $color-red-primary;
+          &-2 {
+            transform: translate(-50%, -50%) rotate(90deg);
+            width: 12px;
+          }
+        }
+
+        &.open .question__icon--span-2 {
+          width: 0;
+        }
+      }
+
+      &__more-btn {
+        width: 100%;
+        margin-top: 1.5rem;
+        border: none;
+        background: #ed4d4733;
+        box-shadow: 0px 11.8273px 23.6545px #ee4d471a;
+
+        p {
+          flex-grow: 1;
+          font-family: $fontRubik;
+          font-style: normal;
+          font-weight: bold;
+          font-size: calc(1rem + 0.6vw);
+          color: $color-red-primary;
+          text-align: center;
+        }
+      }
+    }
+
+    .answer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0 2rem;
+      background: #fff7f5;
+      border-radius: 0.6rem;
+      z-index: -1;
+      transition: all 0.35s ease-in-out;
+
+      &__text {
+        font-family: $fontRubik;
+        font-style: normal;
+        font-weight: 300;
+        color: #fff7f5;
+        // color: #402b2b;
+        line-height: 161%;
+        font-size: calc(1rem + 0.3vw);
+        transition: color 0s 0.25s;
+
+        &.open {
+          color: #402b2b;
+        }
+      }
+
+      &.open {
+        padding: 7.5rem 2rem 3.5rem 2rem;
+      }
     }
   }
 }
