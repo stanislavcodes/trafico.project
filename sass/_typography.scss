@@ -23,6 +23,19 @@
 html {
   font-size: 62.5%;
 }
+p,
+a,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  &::selection {
+    background-color: $color-red-secondary;
+    color: #fff;
+  }
+}
 
 .heading {
   &-primary {
@@ -43,13 +56,21 @@ html {
   }
 
   &-secondary {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
     font-weight: bold;
     text-transform: uppercase;
-    color: #EE4D47;
+    color: #ee4d47;
     font-size: 1.8rem;
     line-height: 167%;
     letter-spacing: 0.1em;
+
+    @include breakpointMin(small) {
+      font-size: 2.2rem;
+    }
+
+    @include breakpointMin(large) {
+      font-size: 2.4rem;
+    }
   }
 }

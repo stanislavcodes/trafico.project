@@ -85,13 +85,11 @@
     @include breakpointMin(small) {
       height: 50px;
       width: 180px;
-      font-size: 1.3rem;
     }
 
     @include breakpointMinMaxCustom(759px, 900px) {
       height: 60px;
       width: 220px;
-      font-size: 1.6rem;
     }
 
     @include breakpointMin(large) {
@@ -209,14 +207,52 @@
 .article {
   background: linear-gradient(#fcddd466, #fcddd466);
   padding: 1.5rem;
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
   border-left: 0.6rem solid #ed4d47;
+  max-width: 32rem;
+  @include flex-center;
+
+  @include breakpointMin(small) {
+    max-width: 40rem;
+    padding: 2rem 2.5rem;
+  }
+
+  @include breakpointMin(large) {
+    border-radius: 1rem;
+    border-left: 1rem solid #ed4d47;
+    padding: 3rem 5.5rem;
+    min-width: 57rem;
+  }
+
+  @include breakpointMinMax(large, xlarge) {
+    padding: 2rem 3rem;
+    min-width: 42rem;
+  }
+
+  @media (min-width: 1023px) and (max-width: 1100px) and (min-height: 1350px) {
+    padding: 2rem 3rem;
+    min-width: 53rem;
+  }
+  @media (min-width: 1023px) and (max-width: 1200px) and (max-height: 801px) {
+    padding: 2rem 3rem;
+    min-width: 42rem;
+  }
+
   &__text {
     opacity: 1;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 148%;
+
+    @include breakpointMin(small) {
+      font-size: 1.8rem;
+    }
+
+    @include breakpointMin(xlarge) {
+      font-size: 2.4rem;
+      line-height: 150%;
+    }
   }
 }
