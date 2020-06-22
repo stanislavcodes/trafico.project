@@ -727,7 +727,7 @@ body {
     align-items: center;
     padding: 2rem 0; }
   .section-faq__illustration {
-    height: 35vh; }
+    height: 20vh; }
   .section-faq__questions {
     display: flex;
     flex-direction: column; }
