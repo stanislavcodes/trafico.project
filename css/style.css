@@ -134,7 +134,7 @@ body {
 
 .btn {
   height: 40px;
-  width: 150px;
+  width: 180px;
   padding: 0 2rem;
   background: #EE4D47;
   background-size: 400%;
@@ -339,11 +339,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: url(../img/menu-bg.svg) top no-repeat, url(../img/menu-bg-1.svg) top no-repeat;
   background-size: 0, 260%;
   background-position: 50% -10rem;
-  transition: all 0.5s ease-in;
-  z-index: 10000; }
+  transition: all 0.5s ease;
+  z-index: 10000;
+  background-color: #f5886dab; }
   @media screen and (min-width: 1023px) {
     .nav {
       max-height: calc(5.5vh + 6rem);
@@ -367,6 +367,7 @@ body {
     border-bottom-left-radius: 4.5rem;
     border-bottom-right-radius: 4.5rem;
     margin-bottom: 10px;
+    background-color: #f5886dd0;
     box-shadow: 0 4px 4px rgba(245, 136, 109, 0.25); }
   .nav__list {
     order: 2;
@@ -378,7 +379,7 @@ body {
     padding: 0;
     visibility: hidden;
     transform: translateY(-140%);
-    transition: transform 0.8s 0s, padding 0.8s, visibility 0.4s; }
+    transition: transform 0.6s 0s, padding 0.6s, visibility 0.4s; }
     @media screen and (min-width: 1023px) {
       .nav__list {
         height: 6rem;
@@ -392,7 +393,7 @@ body {
     padding: 7.5rem 0;
     visibility: visible; }
   .nav__item {
-    transition: all 0.3s ease-in 0.2s; }
+    transition: all 0.2s ease 0.15s; }
     .nav__item--1 {
       transform: translate(80px, -40px); }
     .nav__item--2 {
@@ -888,8 +889,7 @@ body {
             width: 20px;
             height: 3px; } }
         .section-faq .question__icon--span-2 {
-          transform: translate(-50%, -50%) rotate(90deg);
-          width: 12px; }
+          transform: translate(-50%, -50%) rotate(90deg); }
           @media screen and (min-width: 899px) {
             .section-faq .question__icon--span-2 {
               width: 20px; } }
