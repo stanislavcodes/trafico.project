@@ -717,9 +717,13 @@
         font-family: $fontRubik;
         font-style: normal;
         font-weight: 500;
-        font-size: calc(1rem + 0.6vw);
+        font-size: calc(1rem + 0.8vw);
         line-height: 148%;
         max-width: 88%;
+
+        @include breakpointMin(large) {
+          font-size: calc(1rem + 0.6vw);
+        }
       }
       &__icon {
         position: relative;
@@ -766,7 +770,7 @@
           font-family: $fontRubik;
           font-style: normal;
           font-weight: bold;
-          font-size: calc(1rem + 0.6vw);
+          font-size: calc(1rem + 0.8vw);
           color: $color-red-primary;
           text-align: center;
         }
@@ -801,8 +805,12 @@
         // color: #fff7f5;
         color: #402b2b;
         line-height: 161%;
-        font-size: calc(1rem + 0.3vw);
+        font-size: calc(1rem + 0.8vw);
         transition: color 0s 0.25s;
+
+        @include breakpointMin(large) {
+          font-size: calc(1rem + 0.6vw);
+        }
       }
     }
   }

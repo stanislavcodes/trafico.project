@@ -4,6 +4,7 @@ const body = document.getElementById("body");
 const headingBox = document.querySelector(".section-hero__heading-box");
 const nav = document.querySelector(".nav");
 const list = document.querySelector(".nav__list");
+const links = document.querySelectorAll(".nav_link");
 const hamburger = document.querySelector(".nav__hamburger");
 // questions and answers
 const questions = document.querySelectorAll(".question");
@@ -14,15 +15,31 @@ const answers = document.querySelectorAll(".answer");
 hamburger.addEventListener("click", function (e) {
   navToggle(e);
 });
+
+for (i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function () {
+    navToggle(e);
+  });
+}
 // questions and answers
 for (let i = 0; i < questions.length; i++) {
   questions[i].addEventListener("click", check(i));
 }
 /////////////////////// functions
+// smooth scrolling
+var scroll = new SmoothScroll(".logo", {
+  header: "[data-scroll-header]",
+});
+var scroll = new SmoothScroll('.nav a[href*="#"]', {
+  speed: 600,
+});
+var easeOutQuart = new SmoothScroll('[data-easing="linear"]', {
+  easing: "linear",
+});
 // mobile nav open
 function navToggle(e) {
-  e.preventDefault();
-  body.classList.toggle("open");
+  // e.preventDefault();
+  // body.classList.toggle("open");
   hamburger.classList.toggle("open");
   nav.classList.toggle("open");
   list.classList.toggle("open");
@@ -38,7 +55,7 @@ function calcAnswerHeight(par) {
 //questions and answers logic
 (function (a) {
   // open first answer when page is loaded'
-  for(i = 0; i < questionBoxes.length; i++) {
+  for (i = 0; i < questionBoxes.length; i++) {
     questionBoxes[i].classList.add("closed");
   }
   questionBoxes[a].classList.remove("closed");

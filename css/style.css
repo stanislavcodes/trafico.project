@@ -864,9 +864,12 @@ body {
       font-family: "Rubik", sans-serif;
       font-style: normal;
       font-weight: 500;
-      font-size: calc(1rem + 0.6vw);
+      font-size: calc(1rem + 0.8vw);
       line-height: 148%;
       max-width: 88%; }
+      @media screen and (min-width: 1023px) {
+        .section-faq .question__name {
+          font-size: calc(1rem + 0.6vw); } }
     .section-faq .question__icon {
       position: relative;
       overflow: hidden;
@@ -904,7 +907,7 @@ body {
         font-family: "Rubik", sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: calc(1rem + 0.6vw);
+        font-size: calc(1rem + 0.8vw);
         color: #EE4D47;
         text-align: center; }
   .section-faq .answer {
@@ -932,5 +935,8 @@ body {
       font-weight: 300;
       color: #402b2b;
       line-height: 161%;
-      font-size: calc(1rem + 0.3vw);
+      font-size: calc(1rem + 0.8vw);
       transition: color 0s 0.25s; }
+      @media screen and (min-width: 1023px) {
+        .section-faq .answer__text {
+          font-size: calc(1rem + 0.6vw); } }
