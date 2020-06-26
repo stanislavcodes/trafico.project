@@ -96,6 +96,7 @@ function check(b) {
 $(document).ready(function(){
   $(".testimonials").slick({
     autoplay: true,
+    autoplaySpeed: 8000,
     infinite: true,
     speed: 700,
     prevArrow: $(".section-testimonials__arrow--left"),
