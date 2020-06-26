@@ -95,8 +95,10 @@ function check(b) {
 // slick slider
 $(document).ready(function(){
   $(".testimonials").slick({
-    // appendArrows:
+    autoplay: true,
+    infinite: true,
+    speed: 700,
     prevArrow: $(".section-testimonials__arrow--left"),
-    nextArrow: $(".section-testimonials__arrow--right")
+    nextArrow: $(".section-testimonials__arrow--right"),
   });
 });
