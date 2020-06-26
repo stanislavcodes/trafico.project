@@ -92,3 +92,11 @@ function check(b) {
     }
   });
 }
+// slick slider
+$(document).ready(function(){
+  $(".testimonials").slick({
+    // appendArrows:
+    prevArrow: $(".section-testimonials__arrow--left"),
+    nextArrow: $(".section-testimonials__arrow--right")
+  });
+});
