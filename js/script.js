@@ -104,10 +104,6 @@ $(document).ready(function () {
     slidesToShow: 2,
     slidesToScroll: 2,
     variableWidth: true,
-    // slidesToScroll: 1,
-    // centerMode: true,
-    // centerPadding: '10px',
-    // fade: true,
     prevArrow: $(".section-testimonials__arrow--left"),
     nextArrow: $(".section-testimonials__arrow--right"),
     responsive: [
@@ -134,7 +130,7 @@ $(document).ready(function () {
         settings: {
           centerMode: true,
           centerPadding: "20px",
-          // slidesToShow: 1,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
