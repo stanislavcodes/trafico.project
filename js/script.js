@@ -93,13 +93,47 @@ function check(b) {
   });
 }
 // slick slider
-$(document).ready(function(){
+$(document).ready(function () {
   $(".testimonials").slick({
     autoplay: true,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 3000,
     infinite: true,
     speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    // centerPadding: '105px',
+    // fade: true,
     prevArrow: $(".section-testimonials__arrow--left"),
     nextArrow: $(".section-testimonials__arrow--right"),
+    responsive: [
+      {
+        breakpoint: 802,
+        settings: {
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 703,
+        settings: {
+          centerMode: true,
+          centerPadding: "0px",
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: true,
+          centerPadding: "20px",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
+  // $(".testimonials").slick('unslick');
 });
