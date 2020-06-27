@@ -95,8 +95,8 @@ function check(b) {
 // slick slider
 $(document).ready(function () {
   $(".testimonials").slick({
-    autoplay: true,
-    autoplaySpeed: 5000,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
     pauseOnHover: false,
     infinite: false,
     speed: 1000,
@@ -113,12 +113,15 @@ $(document).ready(function () {
           centerMode: true,
           centerPadding: "40px",
           // slidesToShow: 2,
+          initialSlide: 2,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 703,
         settings: {
+          autoplay: true,
+          autoplaySpeed: 5000,
           centerMode: true,
           centerPadding: "0px",
           // slidesToShow: 2,
@@ -128,6 +131,8 @@ $(document).ready(function () {
       {
         breakpoint: 480,
         settings: {
+          autoplay: true,
+          autoplaySpeed: 5000,
           centerMode: true,
           centerPadding: "20px",
           slidesToShow: 1,

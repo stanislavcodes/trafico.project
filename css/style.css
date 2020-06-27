@@ -711,26 +711,27 @@ body {
   .section-how__paragraph {
     max-width: 40rem; } }
 
-@media (min-width: 1023px) and (max-width: 1300px) and (max-height: 1025px) {
-  .section-about, .section-how {
-    padding: 0 5vw; } }
-
 .section-faq {
-  margin: 100px 0;
   position: relative;
-  padding: 0 2.5rem; }
-  @media screen and (min-width: 499px) {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  padding-bottom: 2.5rem; }
+  @media screen and (min-width: 699px) {
     .section-faq {
-      padding: 0 5rem; } }
+      padding-bottom: 5rem;
+      margin-top: 8rem;
+      margin-bottom: 12rem; } }
   @media screen and (min-width: 1023px) {
     .section-faq {
-      margin-top: 0; } }
+      padding-bottom: 10rem;
+      margin-top: 16rem;
+      margin-bottom: 16rem; } }
   .section-faq__background {
     position: absolute;
     top: 4rem;
     right: 0;
     background: #fdede8;
-    height: 100%;
+    height: calc(100% - 4rem);
     width: 88%;
     border-top-left-radius: 5.5rem;
     z-index: -1; }
@@ -751,13 +752,28 @@ body {
       .section-faq__content-box {
         padding-top: 8rem; } }
   .section-faq__content {
+    width: 100%;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 0 2.5rem; }
+    @media screen and (min-width: 499px) {
+      .section-faq__content {
+        padding: 0 5rem; } }
+    @media screen and (min-width: 1023px) {
+      .section-faq__content {
+        padding: 0 15vw; } }
+    @media (min-width: 1200px) and (max-width: 1441px) {
+      .section-faq__content {
+        padding: 0 13vw; } }
+    @media (min-width: 1023px) and (max-width: 1100px) and (max-height: 1380px) {
+      .section-faq__content {
+        padding: 0 8vw; } }
     @media screen and (min-width: 699px) {
       .section-faq__content {
         flex-direction: row;
-        justify-content: center;
-        align-items: center; } }
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 6rem; } }
     @media screen and (min-width: 899px) {
       .section-faq__content {
         margin-bottom: 8rem; } }
@@ -793,7 +809,11 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    padding: 0 2.5rem; }
+    @media screen and (min-width: 499px) {
+      .section-faq__questions {
+        padding: 0 5rem; } }
     @media screen and (min-width: 899px) {
       .section-faq__questions {
         max-width: 1120px;
@@ -968,18 +988,18 @@ body {
     align-items: center; }
   .section-testimonials__heading-box, .section-testimonials__top-box {
     padding: 0 2.5rem; }
+    @media screen and (min-width: 499px) {
+      .section-testimonials__heading-box, .section-testimonials__top-box {
+        padding: 0 5rem; } }
     @media screen and (min-width: 1023px) {
       .section-testimonials__heading-box, .section-testimonials__top-box {
-        padding: 0 24rem; } }
-    @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 1025px) {
+        padding: 0 15vw; } }
+    @media (min-width: 1200px) and (max-width: 1441px) {
       .section-testimonials__heading-box, .section-testimonials__top-box {
-        padding: 0 10rem; } }
-    @media (min-width: 1023px) and (max-width: 1300px) and (max-height: 801px) {
+        padding: 0 13vw; } }
+    @media (min-width: 1023px) and (max-width: 1100px) and (max-height: 1380px) {
       .section-testimonials__heading-box, .section-testimonials__top-box {
-        padding: 0 10rem; } }
-    @media (min-width: 1200px) and (max-width: 1300px) and (max-height: 801px) {
-      .section-testimonials__heading-box, .section-testimonials__top-box {
-        padding: 0 10rem; } }
+        padding: 0 8vw; } }
   .section-testimonials__heading-box {
     padding-right: 0; }
   .section-testimonials__content-box {
@@ -991,17 +1011,14 @@ body {
         flex-direction: row;
         justify-content: space-between; } }
   .section-testimonials__arrow {
-    width: 4rem;
-    height: 1.8rem;
+    width: 5rem;
+    height: 2rem;
     fill: #EE4D47;
-    opacity: 50%;
     cursor: pointer; }
     @media screen and (min-width: 1023px) {
       .section-testimonials__arrow {
         width: 6rem;
         height: 2.5rem; } }
-    .section-testimonials__arrow.active {
-      opacity: 100%; }
   .section-testimonials .testimonials {
     width: 100%;
     margin-left: auto;
@@ -1022,15 +1039,16 @@ body {
     padding: 4.5rem 3.5rem 3rem 3.5rem;
     border-radius: 0.7rem;
     box-shadow: 0px 1.2rem 2.5rem rgba(238, 77, 71, 0.1); }
+    @media screen and (max-width: 359px) {
+      .section-testimonials .testimonial {
+        width: 30rem;
+        height: 25rem; } }
     @media screen and (max-width: 699px) {
       .section-testimonials .testimonial {
-        width: 38rem;
         margin: 2rem 1rem 4.4rem 2.5rem;
         box-shadow: 0px 1.2rem 1.5rem rgba(238, 77, 71, 0.1); } }
     @media screen and (min-width: 1023px) {
       .section-testimonials .testimonial {
-        width: 42rem;
-        height: 36rem;
         padding: 6rem 5rem 5rem 4rem;
         border-radius: 1rem;
         margin: 0 0rem 4.4rem 4rem;
@@ -1063,32 +1081,40 @@ body {
 
 .testimonial,
 .slick-slide {
-  width: 34rem; }
+  width: 34rem;
+  height: 28rem; }
+  @media screen and (max-width: 359px) {
+    .testimonial,
+    .slick-slide {
+      width: 30rem;
+      height: 25rem; } }
   @media screen and (min-width: 1459px) {
     .testimonial,
     .slick-slide {
+      height: 36rem;
       width: 42rem; } }
 
-/* Слайдер */
-/* Слайдер запущен */
-/* Слайдер с точками */
-/* Ограничивающая оболочка */
 .slick-list {
   padding: 0 2rem; }
 
-/* Лента слайдов */
 /* Слайд */
+@media screen and (max-width: 1023px) {
+  .slick-slide {
+    opacity: 0.5;
+    transform: scale(0.97);
+    transition: opacity 0.3s ease-in, transform 0.5s ease-in; } }
+
 /* Слайд активный (показывается) */
+@media screen and (max-width: 1023px) {
+  .slick-slide.slick-active {
+    opacity: 1; } }
+
 /* Слайд основной */
-/* Слайд по центру */
-/* Клонированный слайд */
-/* Стрелка */
-/* Стрелка влево */
-/* Стрелка вправо */
-/* Стрелка не активная */
-/* Точки (булиты) */
-/* Активная точка */
-/* Элемент точки */
+@media screen and (max-width: 1023px) {
+  .slick-slide.slick-current {
+    opacity: 1;
+    transform: scale(1); } }
+
 .footer {
   width: 100%;
   height: 6rem;
@@ -1116,7 +1142,11 @@ body {
     .footer .copy a {
       text-decoration: none;
       color: #EE4D47;
-      font-family: "RubikMedium", sans-serif; }
+      font-family: "RubikMedium", sans-serif;
+      opacity: 0.6;
+      transition: opacity 0.1s ease; }
+      .footer .copy a:hover, .footer .copy a:active {
+        opacity: 1; }
   .footer .social {
     display: flex;
     align-items: center; }
@@ -1126,9 +1156,14 @@ body {
       align-items: center;
       width: 3rem;
       height: 3rem;
-      background-color: #EE4D47;
       border-radius: 100%;
-      margin-left: 1rem; }
+      margin-left: 1rem;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.15s ease;
+      background-color: #EE4D47; }
+      .footer .social__link:hover, .footer .social__link:active {
+        opacity: 1; }
       @media screen and (min-width: 699px) {
         .footer .social__link {
           width: 3.6rem;
