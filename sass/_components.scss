@@ -52,7 +52,6 @@
   font-family: $fontRubBold;
   font-size: 1rem;
   text-transform: uppercase;
-  color: #fff;
   cursor: pointer;
   @include flex-center;
   transition: all 0.3s ease;
@@ -114,6 +113,10 @@
     &:active &__text {
       margin-right: 1rem;
     }
+  }
+  a, span {
+    text-decoration: none;
+    color: #fff;
   }
 }
 
@@ -254,6 +257,4 @@
       line-height: 150%;
     }
   }
-
-  
 }
