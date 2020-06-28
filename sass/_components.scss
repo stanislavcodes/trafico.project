@@ -62,7 +62,7 @@
     font-size: 1.3rem;
   }
   @include breakpointMinMaxCustom(759px, 900px) {
-    height: 60px;
+    // height: 50px;
     width: 220px;
     font-size: 1.6rem;
   }
@@ -214,7 +214,8 @@
   border-radius: 0.6rem;
   border-left: 0.6rem solid #ed4d47;
   max-width: 32rem;
-  @include flex-center;
+  display: flex;
+  align-items: center;
 
   @include breakpointMin(small) {
     max-width: 40rem;

@@ -17,8 +17,14 @@ hamburger.addEventListener("click", function (e) {
 });
 
 for (i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function () {
-    navToggle(e);
+  links[i].addEventListener("click", function() {
+    if (nav.classList.contains("open")) {
+      console.log('heeehhhhhee');
+      hamburger.classList.remove("open");
+      nav.classList.remove("open");
+      list.classList.remove("open");
+      headingBox.classList.remove("open");
+    }
   });
 }
 // questions and answers
@@ -27,7 +33,7 @@ for (let i = 0; i < questions.length; i++) {
 }
 /////////////////////// functions
 // smooth scrolling
-var scroll = new SmoothScroll('.logo a[href*-"#"', {
+var scroll = new SmoothScroll('.logo a[href*="#"]', {
   speed: 600,
 });
 var scroll = new SmoothScroll('.nav a[href*="#"]', {
@@ -46,7 +52,7 @@ function navToggle(e) {
   hamburger.classList.toggle("open");
   nav.classList.toggle("open");
   list.classList.toggle("open");
-  headingBox.classList.toggle("open");
+  // headingBox.classList.toggle("open");
 }
 // questions and answers
 function calcAnswerHeight(par) {

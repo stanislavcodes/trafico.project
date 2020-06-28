@@ -540,8 +540,9 @@
       @include breakpointMin(medium) {
         width: 80%;
       }
-      @include breakpointMin(xmedium) {
-        width: 75%;
+
+      @include breakpointMin(xlarge) {
+        width: 70%;
       }
     }
 
@@ -589,6 +590,10 @@
       @include breakpointMin(xmedium) {
         margin-bottom: 8rem;
       }
+
+      @include breakpointMin(xlarge) {
+        justify-content: space-between;
+      }
     }
 
     &__figure {
@@ -627,7 +632,7 @@
         height: 50vh;
       }
       @include breakpointMin(xlarge) {
-        height: 50vh;
+        height: 40vh;
       }
     }
 
@@ -1044,21 +1049,31 @@
     margin-top: 6rem;
 
     &__background {
+      overflow-x: hidden;
       position: absolute;
       top: 7rem;
       left: 0;
       background: $color-blue-dark;
       height: calc(100% - 7rem);
-      width: 88%;
       border-top-right-radius: 5.5rem;
+      // border-bottom-right-radius: 5.5rem;
       // border-bottom-left-radius: 50px;
       z-index: -1;
+      width: 88%;
 
       @include breakpointMin(medium) {
-        width: 80%;
+        top: 12rem;
+        height: calc(100% - 12rem);
       }
-      @include breakpointMin(xmedium) {
-        width: 75%;
+
+      @include breakpointMinMaxCustom(1300px, 1441px) {
+        top: 15rem;
+        height: calc(100% - 15rem);
+      }
+
+      @include breakpointMin(xlarge) {
+        top: 18rem;
+        height: calc(100% - 18rem);
       }
     }
 
@@ -1069,6 +1084,21 @@
       width: 21rem;
       height: 9rem;
       z-index: -1;
+
+      @include breakpointMin(medium) {
+        width: 35rem;
+        height: 15rem;
+      }
+      @include breakpointMinMaxCustom(1300px, 1441px) {
+        width: 40rem;
+        height: 18rem;
+        left: -10rem;
+      }
+      @include breakpointMin(xlarge) {
+        width: 49rem;
+        height: 21rem;
+        left: -13rem;
+      }
     }
 
     &__content-box {
@@ -1077,6 +1107,20 @@
       flex-direction: column;
       // justify-content: center;
       align-items: center;
+
+      @include breakpointMin(medium) {
+        padding-top: 18rem;
+      }
+
+      @include breakpointMin(large) {
+        padding-top: 4rem;
+      }
+      @include breakpointMinMaxCustom(1300px, 1441px) {
+        padding-top: 6rem;
+      }
+      @include breakpointMin(xlarge) {
+        padding-top: 10rem;
+      }
     }
 
     &__content {
@@ -1086,13 +1130,40 @@
       // justify-content: center;
       align-items: center;
 
+      @include breakpointMin(xmedium) {
+        flex-direction: row;
+        justify-content: center;
+      }
+      @include breakpointMin(large) {
+        width: 100%;
+        padding-right: 10rem;
+      }
+
       .article-second {
         background: transparent;
         align-self: flex-start;
 
+        @include breakpointMin(large) {
+          align-self: center;
+          margin-top: 10rem;
+        }
+
         &__text {
           color: #fff;
-          font-family: $fontRubReg;
+          font-family: $fontRubik;
+          font-weight: normal;
+          font-size: 1.4rem;
+          line-height: 148%;
+
+          @include breakpointMin(small) {
+            font-size: 1.6rem;
+          }
+
+          @include breakpointMin(xlarge) {
+            font-size: 2rem;
+            line-height: 150%;
+            letter-spacing: 0.6px;
+          }
         }
       }
     }
@@ -1104,6 +1175,23 @@
       box-shadow: 0px 1rem 2rem rgba(238, 77, 71, 0.1);
       border-radius: 0.6rem;
       padding: 3rem 4rem;
+
+      @include breakpointMin(medium) {
+        margin-top: 0;
+        border-radius: 1rem;
+        padding: 0 4rem;
+        @include flex-center;
+        width: 55rem;
+        height: 44rem;
+      }
+
+      @include breakpointMin(xlarge) {
+        padding: 0 7.5rem;
+        box-shadow: 0px 2rem 4rem rgba(238, 77, 71, 0.1);
+      }
+
+      @include breakpointMin(large) {
+      }
 
       .form {
         width: 100%;
@@ -1123,9 +1211,26 @@
           font-family: $fontRubBold;
           font-size: 1.1rem;
 
+          @include breakpointMin(medium) {
+            height: 5rem;
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+          }
+
+          @include breakpointMin(xlarge) {
+            height: 6rem;
+            font-size: 1.8rem;
+          }
+
           &:focus {
             border: 1.5px solid $color-red-primary;
             box-shadow: 0px 1rem 2rem rgba(238, 77, 71, 0.1);
+
+            @include breakpointMin(xlarge) {
+              font-size: 1.8rem;
+              box-shadow: 0px 2rem 4rem rgba(238, 77, 71, 0.1);
+            }
           }
         }
 
@@ -1133,7 +1238,16 @@
           font-family: $fontRubLight;
           font-size: 1rem;
           color: #402b2b;
+          letter-spacing: 0.6px;
           // margin-bottom: 1.6rem;
+
+          @include breakpointMin(medium) {
+            font-size: 1.2rem;
+          }
+
+          @include breakpointMin(xlarge) {
+            font-size: 1.5rem;
+          }
         }
       }
     }
@@ -1141,16 +1255,34 @@
     &__navigation {
       margin: 7rem 0 2rem 0;
       width: 100%;
-      padding: 0 7rem 0 2rem;
+      padding: 0 4rem 0 2rem;
       display: flex;
       justify-content: space-between;
       align-self: flex-start;
+      width: 88%;
+
+      @include breakpointMin(medium) {
+        width: 80%;
+        padding: 0 6rem 0 4rem;
+        margin: 8rem 0 4rem 0;
+      }
+      @include breakpointMin(large) {
+        padding: 0 0 0 8rem;
+      }
+      @include breakpointMin(xlarge) {
+        margin: 18rem 0 12rem 0;
+        padding: 0 0 0 12rem;
+      }
 
       .navigation-box {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include breakpointMin(medium) {
+          flex-direction: row;
+        }
       }
 
       .navigation-link {
@@ -1159,8 +1291,27 @@
         text-decoration: none;
         color: #fff;
 
+        @include breakpointMin(medium) {
+          font-size: 1.4rem;
+        }
+
+        @include breakpointMin(large) {
+          font-size: 1.6rem;
+        }
+
+        @include breakpointMin(xlarge) {
+          font-size: 1.8rem;
+        }
+
         &:not(:last-child) {
           margin-bottom: 0.6rem;
+          @include breakpointMin(medium) {
+            margin-bottom: 0;
+            margin-right: 3rem;
+          }
+          @include breakpointMin(large) {
+            margin-right: 6rem;
+          }
         }
       }
     }
@@ -1177,6 +1328,14 @@
   padding: 0 2rem;
   padding: 0 3vh;
 
+  @include breakpointMax(xsmall) {
+    height: 8rem;
+  }
+  
+  @include breakpointMin(medium) {
+    height: 10rem;
+  }
+
   @include breakpointMin(large) {
     padding: 0 20vw 0 15vw;
   }
@@ -1190,17 +1349,26 @@
   @include breakpointMin(large) {
     height: 16rem;
   }
+  @include breakpointMin(xlarge) {
+    padding-top: 5rem;
+    align-items: flex-start;
+    height: 18rem;
+  }
 
   .copy {
     font-family: $fontRubLight;
     font-size: 1.2rem;
     line-height: 170%;
 
+    @include breakpointMin(large) {
+      font-size: 1.6rem;
+    }
+
     a {
       text-decoration: none;
       color: $color-red-primary;
       font-family: $fontRubMed;
-      opacity: 0.6;
+      // opacity: 0.6;
       transition: opacity 0.1s ease;
 
       &:hover,
@@ -1221,7 +1389,7 @@
       border-radius: 100%;
       margin-left: 1rem;
       cursor: pointer;
-      opacity: 0.6;
+      // opacity: 0.6;
       transition: opacity 0.15s ease;
       background-color: $color-red-primary;
 
@@ -1234,6 +1402,12 @@
         width: 3.6rem;
         height: 3.6rem;
         margin-left: 3rem;
+      }
+
+      @include breakpointMin(medium) {
+        width: 4rem;
+        height: 4rem;
+        margin-left: 4rem;
       }
     }
 
