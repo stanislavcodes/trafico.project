@@ -10,6 +10,7 @@
   }
 
   &--text {
+    text-decoration: none;
     font-family: $fontDM;
     text-transform: uppercase;
     font-size: 2.2rem;
@@ -223,7 +224,7 @@
     padding: 3rem 5.5rem;
     min-width: 57rem;
   }
-// 
+  //
   @include breakpointMinMax(large, xlarge) {
     padding: 2rem 3rem;
     min-width: 42rem;
@@ -240,9 +241,7 @@
 
   &__text {
     opacity: 1;
-    font-family: "Rubik", sans-serif;
-    font-style: normal;
-    font-weight: 500;
+    font-family: $fontRubMed;
     font-size: 1.4rem;
     line-height: 148%;
 
@@ -255,4 +254,6 @@
       line-height: 150%;
     }
   }
+
+  
 }

@@ -27,10 +27,13 @@ for (let i = 0; i < questions.length; i++) {
 }
 /////////////////////// functions
 // smooth scrolling
-var scroll = new SmoothScroll(".logo", {
-  header: "[data-scroll-header]",
+var scroll = new SmoothScroll('.logo a[href*-"#"', {
+  speed: 600,
 });
 var scroll = new SmoothScroll('.nav a[href*="#"]', {
+  speed: 600,
+});
+var scroll = new SmoothScroll('.navigation-box a[href*="#"]', {
   speed: 600,
 });
 var easeOutQuart = new SmoothScroll('[data-easing="linear"]', {
