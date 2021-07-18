@@ -17,9 +17,8 @@ hamburger.addEventListener("click", function (e) {
 });
 
 for (i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function() {
+  links[i].addEventListener("click", function () {
     if (nav.classList.contains("open")) {
-      console.log('heeehhhhhee');
       hamburger.classList.remove("open");
       nav.classList.remove("open");
       list.classList.remove("open");
@@ -151,4 +150,33 @@ $(document).ready(function () {
     ],
   });
   // $(".testimonials").slick('unslick');
+});
+
+// Intersection Observer
+
+const faders = document.querySelectorAll(".fade-in");
+
+let appearOptions = {
+  root: null,
+  threshold: 0,
+  rootMargin: "10px",
+};
+
+let appearOnScroll = new IntersectionObserver(function (
+  entries,
+  appearOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+},
+appearOptions);
+
+faders.forEach((fader) => {
+  appearOnScroll.observe(fader);
 });

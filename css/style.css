@@ -1396,3 +1396,38 @@ body {
     .footer .social__icon {
       fill: #fff;
       height: 60%; }
+
+.nav,
+.heading-primary,
+.btn-cta {
+  animation: 0.5s linear 0.1s slideInBottom; }
+
+.illustration-car {
+  animation: 0.8s ease-in slideInLeft; }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.25s ease-in, transform 0.5s linear;
+  transform: translateY(30%); }
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0); }
+
+@keyframes slideInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30%); }
+  70% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(-55%); } }
